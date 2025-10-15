@@ -147,7 +147,125 @@ body::before {
     font-size: 1.8rem;
     color: #fff;
 }
+@media (max-width: 768px) {
+    /* CABEÇALHO E MENU MOBILE */
+    .header-content {
+        padding: 10px 20px;
+    }
 
+    .logo img {
+        height: 40px; 
+    }
+    
+    .logo-text {
+        font-size: 20px;
+    }
+
+    .menu-toggle {
+        display: block; 
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #E50020; 
+    }
+    
+    .main-nav {
+        position: relative;
+    }
+
+    .nav-list {
+        /* CORREÇÃO CRÍTICA: display: none para esconder o menu por padrão no mobile */
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #FFFFFF;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        z-index: 900;
+        border: 1px solid #E50020;
+    }
+
+    .nav-list.active {
+        /* CORREÇÃO CRÍTICA: display: flex para mostrar o menu quando ativo */
+        display: flex; 
+    }
+
+    .nav-list a {
+        padding: 15px 20px;
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid #F8F8F8;
+        color: #333333;
+    }
+    
+    /* BANNER PRINCIPAL MOBILE */
+    .hero-banner {
+        padding: 60px 20px;
+    }
+    
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    /* MÍDIAS SOCIAIS MOBILE */
+    .social-icon-grid {
+        gap: 20px;
+    }
+    .social-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    /* RODAPÉ MOBILE */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-content p {
+        margin-bottom: 15px;
+    }
+    
+    /* ======== SOBRE NÓS - RESPONSIVIDADE ======== */
+    .historia, .mvv {
+        padding: 30px 20px;
+    }
+
+    .historia p, .mvv p {
+        font-size: 1rem;
+    }
+
+    .historia-img {
+        max-width: 100%;
+    }
+    
+    /* =================== NOSSOS SETORES (CORRIGIDO) =================== */
+    .super-fresh {
+        padding: 50px 0;
+    }
+    
+    .setor-grid {
+        grid-template-columns: 1fr; /* Apenas uma coluna no mobile */
+        gap: 25px;
+    }
+
+    .setor-card {
+        flex-direction: column;
+    }
+    
+    .destaques {
+        grid-template-columns: 1fr; /* Apenas uma coluna para os destaques */
+    }
+}
 /* =================== HERO =================== */
 .hero-banner {
     text-align: center;
@@ -819,4 +937,5 @@ body::before {
         grid-template-columns: 1fr; /* Apenas uma coluna para os destaques */
     }
 }
+
 
